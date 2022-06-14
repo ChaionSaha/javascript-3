@@ -1,0 +1,25 @@
+{
+	"name": "javascript-3",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"homepage": "sass --watch style/homepage.scss style/homepage.css --no-source-map",
+		"viewuser": "sass --watch style/viewUser.scss style/viewUser.css --no-source-map",
+		"edituser": "sass --watch style/editUser.scss style/editUser.css --no-source-map"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Chaion-Saha/javascript-3.git"
+	},
+	"author": "Chaion-Saha",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Chaion-Saha/javascript-3/issues"
+	},
+	"homepage": "https://github.com/Chaion-Saha/javascript-3#readme",
+	"dependencies": {
+		"sass": "^1.52.3"
+	}
+}

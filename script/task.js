@@ -1,6 +1,6 @@
 "use strict";
 
-export const data = [
+const data = [
 	{
 		firstName: "Westley",
 		lastName: "Effertz",
@@ -402,7 +402,3 @@ export const data = [
 		company: "Bruen Group",
 	},
 ];
-data.forEach((d, i) => {
-	d.id = i;
-});
-

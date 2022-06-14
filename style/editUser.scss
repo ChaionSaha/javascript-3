@@ -1,0 +1,15 @@
+@import "variables";
+
+@include addBody;
+
+.navbar{
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: right;
+    margin-top: 1.5rem;
+    margin-right: 2rem;
+    & a{
+        color: rgba($color: #000, $alpha: 0.6);
+        text-decoration: none;
+    }
+}

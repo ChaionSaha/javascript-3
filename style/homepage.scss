@@ -1,32 +1,6 @@
 @import "variables";
 
-*,
-*::before,
-*::after {
-	padding: 0;
-	margin: 0;
-	font-family: inherit;
-	font-size: inherit;
-}
-
-body {
-	font-family: 'Bitter', serif;;
-	font-size: 62.5%;
-	overflow: auto;
-	@include gradient;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
+@include addBody;
 
 .navbar {
 	height: 5rem;
@@ -47,14 +21,63 @@ body {
 	width: 95vw;
 	border-collapse: collapse;
 	margin: 0 auto;
+
+	& thead {
+		& tr {
+			background-color: rgba(#fff, 0.5);
+			backdrop-filter: blur(20px);
+			color: #ffffff;
+			text-align: left;
+			font-weight: 500;
+			& td {
+				border-bottom: none;
+				&:first-child {
+					border-top-left-radius: 0.7rem;
+					border-bottom-left-radius: 0.7rem;
+				}
+				&:last-child {
+					border-top-right-radius: 0.7rem;
+					border-bottom-right-radius: 0.7rem;
+				}
+			}
+		}
+	}
+
+	& tr{
+		transition: all 300ms;
+		border-bottom: 1px solid rgba($color: #fff, $alpha: 0.5);
+		&:hover{
+			background-color: rgba(#fff, 0.2);
+			backdrop-filter: blur(1rem);
+		}
+
+		&:first-child {
+			border-top-left-radius: 0.7rem;
+			border-bottom-left-radius: 0.7rem;
+		}
+		&:last-child {
+			border-top-right-radius: 0.7rem;
+			border-bottom-right-radius: 0.7rem;
+		}
+	}
+
+
 	& td {
 		font-size: 1.3rem;
 		color: rgba($color: #000, $alpha: 0.7);
-		border: 3px solid rgba($color: #fff, $alpha: 0.5);
 		padding: 0.5rem 0.7rem;
 		text-align: center;
+
+		&:first-child {
+			border-top-left-radius: 0.7rem;
+			border-bottom-left-radius: 0.7rem;
+		}
+		&:last-child {
+			border-top-right-radius: 0.7rem;
+			border-bottom-right-radius: 0.7rem;
+		}
 	}
-	
+
 	& button {
 		padding: 0.5rem;
 		cursor: pointer;
@@ -73,12 +96,12 @@ body {
 
 @include animations;
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
 	width: 12px;
-	background-color: transparent;
 	z-index: 100;
+	background-color: transparent;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
 	background-color: rgba(#000, 1);
 }

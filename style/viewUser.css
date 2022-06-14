@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   font-weight: inherit;
   padding: inherit;
   margin: inherit;
@@ -7,17 +9,29 @@
 }
 
 body {
-  font-family: 'Bitter', serif;
+  font-family: "Bitter", serif;
   font-size: 62.5%;
   padding: 0;
   margin: 0;
   font-weight: 500;
   background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
   background-size: 400% 400%;
-  animation: gradient;
+  animation: gradient-anim;
   animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
+@keyframes gradient-anim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .navbar {
   font-size: 1.2rem;
   width: 100%;
@@ -25,7 +39,6 @@ body {
   margin-top: 1.5rem;
   margin-right: 2rem;
 }
-
 .navbar a {
   color: rgba(0, 0, 0, 0.6);
   text-decoration: none;

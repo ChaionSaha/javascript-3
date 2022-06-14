@@ -3,13 +3,11 @@
 	background-size: 400% 400%;
 	animation: gradient-anim;
 	animation-duration: 10s;
-
-	
+	animation-iteration-count: infinite;
 }
 
-
-@mixin animations{
-    @keyframes gradient-anim {
+@mixin animations {
+	@keyframes gradient-anim {
 		0% {
 			background-position: 0% 50%;
 		}
@@ -20,4 +18,26 @@
 			background-position: 0% 50%;
 		}
 	}
+}
+
+@mixin addBody {
+	*,
+	*::before,
+	*::after {
+		font-weight: inherit;
+		padding: inherit;
+		margin: inherit;
+		font-size: inherit;
+		font-family: inherit;
+	}
+
+	body {
+		font-family: "Bitter", serif;
+		font-size: 62.5%;
+		padding: 0;
+		margin: 0;
+		font-weight: 500;
+		@include gradient;
+	}
+	@include animations;
 }

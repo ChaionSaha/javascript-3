@@ -403,7 +403,6 @@ const data = [
 	},
 ];
 
-
 const tb = document.querySelector(".user-data");
 
 const display = function (arr) {
@@ -426,7 +425,7 @@ display(data);
 
 const viewBtns = document.querySelectorAll(".view-data");
 const viewBtnsArr = [...viewBtns];
-viewBtnsArr.forEach((btn) => {
+viewBtns.forEach((btn) => {
 	btn.addEventListener("click", (e) => {
 		e.preventDefault();
 		let userEmail =
@@ -434,4 +433,15 @@ viewBtnsArr.forEach((btn) => {
 		console.log(userEmail);
 		location.href = `../pages/viewUser.html?user=${userEmail}`;
 	});
+});
+
+
+const editBtns = document.querySelectorAll('.edit-data');
+editBtns.forEach(btn => {
+	btn.addEventListener('click', e =>
+	{
+		e.preventDefault();
+		let userEmail = e.target.parentElement.parentElement.children[2].innerText;
+		location.href = `../pages/editUser.html?user=${userEmail}`;
+	})
 });
