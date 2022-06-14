@@ -11,8 +11,8 @@
 			rel="stylesheet"
 		/>
 		<link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
-		<link rel="stylesheet" href="../style/viewUser.css" />
-		<script defer src="../script/editUser.js"></script>
+		<link rel="stylesheet" href="../style/editUser.css" />
+		<script defer type="module" src="../script/editUser.js"></script>
 		<title>Edit User</title>
 	</head>
 	<body>
@@ -21,7 +21,34 @@
 		</div>
 
 		<main>
-			<div class="user"></div>
+			<div class="user">
+				<p class="name"></p>
+				<div class="first-name">
+					<p>First Name</p>
+					<input type="text" name="first-name" id="first-name">
+				</div>
+				<div class="last-name">
+					<p>Last name</p>
+					<input type="text" name="last-name" id="last-name">
+				</div>
+				<div class="email">
+					<p>Email</p>
+					<input type="text" name="email" id="email">
+				</div>
+				<div class="point">
+					<p>Point</p>
+					<input type="text" name="point" id="point">
+				</div>
+				<div class="phone">
+					<p>Phone</p>
+					<input type="text" name="phone" id="phone">
+				</div>
+				<div class="company">
+					<p>Company</p>
+					<input type="text" name="company" id="company">
+				</div>
+				<button class="submit">Submit</button>
+			</div>
 		</main>
 	</body>
 </html>

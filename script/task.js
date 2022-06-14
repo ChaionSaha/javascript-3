@@ -1,6 +1,6 @@
 "use strict";
 
-const data = [
+export const data = [
 	{
 		firstName: "Westley",
 		lastName: "Effertz",

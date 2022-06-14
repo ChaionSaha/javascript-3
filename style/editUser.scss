@@ -2,14 +2,76 @@
 
 @include addBody;
 
-.navbar{
-    font-size: 1.2rem;
-    width: 100%;
-    text-align: right;
-    margin-top: 1.5rem;
-    margin-right: 2rem;
-    & a{
-        color: rgba($color: #000, $alpha: 0.6);
-        text-decoration: none;
-    }
+.navbar {
+	font-size: 1.2rem;
+	width: 100%;
+	text-align: right;
+	margin-top: 1.5rem;
+	margin-right: 2rem;
+	& a {
+		color: rgba($color: #000, $alpha: 0.6);
+		text-decoration: none;
+	}
 }
+
+main {
+	display: flex;
+	flex-grow: 1;
+	// flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1rem;
+	font-size: 1.2rem;
+	color: rgba($color: #000, $alpha: 0.6);
+}
+
+.name{
+    font-size: 3.5rem;
+    color: transparent;
+    margin-bottom: 1rem;
+    font-weight: bolder;
+    -webkit-text-stroke: 1px rgba($color: #000, $alpha: 1);
+}
+
+.user {
+	& div {
+		display: flex;
+		width: 110%;
+        align-items: center;
+
+		& p {
+			flex-grow: 1;
+		}
+
+		& input {
+			padding: 0.5rem;
+			background-color: transparent;
+			border: 1px solid rgba(#000, 0.3);
+			outline: none;
+			transition: all 400ms;
+			&:focus {
+				border: 1px solid rgba($color: #000, $alpha: 0.7);
+				box-shadow: 0 0 5rem rgba($color: #000, $alpha: 0.2);
+				backdrop-filter: blur(30px);
+			}
+		}
+	}
+	& button {
+		padding: 0.5rem;
+		cursor: pointer;
+		background-color: transparent;
+		margin: 5px;
+		margin-top: 2.5rem;
+		border: 1px solid rgba($color: #000, $alpha: 0.5);
+		border-radius: 5px;
+		transition: all 300ms;
+		color: rgba($color: #000, $alpha: 0.7);
+
+		&:hover {
+			background: rgba(#fff, 0.5);
+		}
+	}
+}
+
+
+@include scroll;
