@@ -1,0 +1,23 @@
+@mixin gradient {
+	background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+	background-size: 400% 400%;
+	animation: gradient-anim;
+	animation-duration: 10s;
+
+	
+}
+
+
+@mixin animations{
+    @keyframes gradient-anim {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+}

@@ -1,0 +1,81 @@
+*, *::before, *::after{
+    font-weight: inherit;
+    padding: inherit;
+    margin: inherit;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+body{
+    font-family: 'Bitter', serif;
+    font-size: 62.5%;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+    background-size: 400% 400%;
+    animation: gradient;
+    animation-duration: 10s;
+}
+
+.navbar{
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: right;
+    margin-top: 1.5rem;
+    margin-right: 2rem;
+    & a{
+        color: rgba($color: #000, $alpha: 0.6);
+        text-decoration: none;
+    }
+}
+
+main{
+    display: flex;
+    flex-grow: 1;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    color: rgba($color: #000, $alpha: 0.6);
+}
+
+.name{
+    font-size: 3.5rem;
+    color: transparent;
+    margin-bottom: 1rem;
+    font-weight: bolder;
+    -webkit-text-stroke: 1px rgba($color: #000, $alpha: 0.6);
+}
+
+.first-name{
+    margin-bottom: 1rem;
+}
+
+.last-name{
+    margin-bottom: 1rem;
+}
+
+.email{
+    margin-bottom: 1rem;
+}
+.point{
+    margin-bottom: 1rem;
+}
+
+.phone{
+    margin-bottom: 1rem;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
